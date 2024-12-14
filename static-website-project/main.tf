@@ -67,3 +67,7 @@ resource "aws_s3_bucket_website_configuration" "mywebapp" {
     suffix = "index.html"
   }
 }
+
+output "name" {
+  value = aws_s3_bucket_website_configuration.mywebapp.website_endpoint
+}
